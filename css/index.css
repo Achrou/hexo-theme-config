@@ -1,78 +1,80 @@
-html,body {
+html,
+body {
   /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;*/
   font-size: 14px;
   line-height: 1.5;
   height: 100%;
   background-color: #fff;
+  overflow: hidden;
 }
-.nav.is-dark {
-  background-color: #232B2D;
-  color: #F6F7F7;
+.columns {
+  margin:0;
 }
-.nav.is-dark .nav-item a, .nav.is-dark a.nav-item {
-    color: #F6F7F7;
-}
-.nav.is-dark .nav-item a.button.is-default {
-    color: #F6F7F7;
-    background-color: transparent;
-    border-width: 2px;
-}
-.nav.menu {
-  border-bottom: 1px solid #e1e1e1;
-}
-.nav.menu .nav-item .icon-btn {
-  border: 3px solid #B7C6C9;
-  border-radius: 90px;
-  padding: 5px 7px;
-  color: #B7C6C9;
-}
-.nav.menu .nav-item.is-active .icon-btn {
-  color: #2EB398;
-  border: 3px solid #2EB398;
-}
-.nav.menu .nav-item .icon-btn .fa {
-  font-size: 20px;
-  color: #B7C6C9;
-}
-.nav.menu .nav-item.is-active .icon-btn .fa {
-  color: #2EB398;
+.column {
+  padding: 0;
 }
 .aside {
-  display:block;
-  background-color: #F9F9F9;
-  border-right: 1px solid #DEDEDE;
-  min-width: 300px;
-  max-width: 600px;
+  position: relative;
+  display: block;
+  background-color: #f9f9f9;
+  border-right: 1px solid #dedede;
+  min-width: 290px;
+  max-width: 300px;
+}
+.aside-content {
+}
+.pane-parent-child {
+  padding: .75rem;
+}
+.aside-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+.aside-footer-right {
+  position: absolute;
+  right: 0;
+}
+.collapse-aside {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 9px 0 9px 10px;
+  height: 45px;
 }
 .messages {
-  display:block;
+  display: block;
   background-color: #fff;
-  border-right: 1px solid #DEDEDE;
+  border-right: 1px solid #dedede;
   padding: 40px 20px;
 }
 .message {
-  display:block;
+  display: block;
   background-color: #fff;
   padding: 0;
 }
 .aside .compose {
   height: 95px;
-  margin:0 -10px;
+  margin: 0 -10px;
   padding: 25px 30px;
 }
 .aside .compose .button {
-  color: #F6F7F7;
+  color: #f6f7f7;
 }
 .aside .compose .button .compose {
   font-size: 14px;
   font-weight: 700;
 }
 .aside .main {
-  padding: 40px;
-  color: #6F7B7E;
+  /* padding: 40px; */
+  color: #6f7b7e;
 }
 .aside .title {
-  color: #6F7B7E;
+  color: #6f7b7e;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -80,132 +82,30 @@ html,body {
 .aside .main .item {
   display: block;
   padding: 10px 0;
-  color: #6F7B7E;
+  color: #6f7b7e;
+  /* padding-left: 20px; */
 }
 .aside .main .item.active {
-  background-color: #F1F1F1;
-  margin: 0 -50px;
-  padding-left: 50px;
+  background-color: #f1f1f1;
+  border-left: 4px solid #5b9dd9
+  /* margin: 0 -50px; */
+  /* padding-left: 50px; */
 }
-.aside .main .item:active,.aside .main .item:hover {
-  background-color: #F2F2F2;
-  margin: 0 -50px;
-  padding-left: 50px;
+.aside .main .item:active,
+.aside .main .item:hover {
+  background-color: #f2f2f2;
+  border-left: 4px solid #5b9dd9
+  /* margin: 0 -50px; */
+  /* padding-left: 50px; */
 }
-.aside .main .icon {
+/* .aside .main .icon {
   font-size: 19px;
   padding-right: 30px;
-  color: #A0A0A0;
-}
+  color: #a0a0a0;
+} */
 .aside .main .name {
   font-size: 15px;
-  color: #5D5D5D;
+  color: #5d5d5d;
   font-weight: 500;
-}
-.messages .action-buttons {
-  padding: 0;
-  margin-top: -20px;
-}
-.message .action-buttons {
-  padding: 0;
-  margin-top: -5px;
-}
-.action-buttons .control.is-grouped {
-  display: inline-block;
-  margin-right: 30px;
-}
-.action-buttons .control.is-grouped:last-child {
-  margin-right: 0;
-}
-.action-buttons .control.is-grouped .button:first-child {
-  border-radius: 5px 0 0 5px;
-}
-.action-buttons .control.is-grouped .button:last-child {
-  border-radius: 0 5px 5px 0;
-}
-.action-buttons .control.is-grouped .button {
-  margin-right: -5px;
-  border-radius: 0;
-}
-.pg {
-  display: inline-block;
-  top:10px;
-}
-.action-buttons .pg .title {
-  display: block;
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 3px;
-  font-size:12px;
-  color: #AAAAA;
-}
-.action-buttons .pg a{
-  font-size:12px;
-  color: #AAAAAA;
-  text-decoration: none;
-}
-.is-grouped .button {
-  background-image: linear-gradient(#F8F8F8, #F1F1F1);
-}
-.is-grouped .button .fa {
-  font-size: 15px;
-  color: #AAAAAA;
-}
-.inbox-messages {
-  margin-top:60px;
-}
-.message-preview {
-  margin-top: 60px;
-}
-.inbox-messages .card {
-  width: 100%;
-}
-.inbox-messages strong {
-  color: #5D5D5D;
-}
-.inbox-messages .msg-check {
-  padding: 0 20px;
-}
-.inbox-messages .msg-subject {
-  padding: 10px 0;
-  color: #5D5D5D;
-}
-.inbox-messages .msg-attachment {
-  float:right;
-}
-.inbox-messages .msg-snippet {
-  padding: 5px 20px 0px 5px;
-}
-.inbox-messages .msg-subject .fa {
-  font-size: 14px;
-  padding:3px 0;
-}
-.inbox-messages .msg-timestamp {
-  float: right;
-  padding: 0 20px;
-  color: #5D5D5D;
-}
-.message-preview .avatar {
-  display: inline-block;
-}
-.message-preview .top .address {
-  display: inline-block;
-  padding: 0 20px;
-}
-.avatar img {
-  width: 40px;
-  border-radius: 50px;
-  border: 2px solid #999;
-  padding: 2px;
-}
-.address .name {
-  font-size: 16px;
-  font-weight: bold;
-}
-.address .email {
-  font-weight: bold;
-  color: #B6C7D1;
-}
-.card.active {
-  background-color:#F5F5F5;
+  padding-left: 20px;
 }

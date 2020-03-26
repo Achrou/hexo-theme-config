@@ -8,7 +8,6 @@
     <title>Inbox - Free Bulma template</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.1/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/NZ-Loading.min.css">
@@ -18,39 +17,453 @@
 <body>
     <div class="columns" id="mail-app">
         <aside class="column is-one-fifth aside hero is-fullheight">
-            <div>
-                <div class="compose has-text-centered">
-                    <a class="button is-danger is-block is-bold">
-                        <span class="compose">保存更改</span>
-                    </a>
-                </div>
+            <!-- <div class="aside-head">
+                <a class="button is-success is-block is-bold">
+                    <span class="icon is-small">
+                        <i class="fa fa-check"></i>
+                    </span>
+                    <span class="compose">保存更改</span>
+                </a>
+            </div> -->
+            <div class="aside-content">
                 <div class="main">
-                    <a href="#" class="item active">
-                        <span class="icon">
-                            <i class="fa fa-inbox"></i>
-                        </span>
-                        <span class="name">站点设置</span>
-                    </a>
-                    <a href="#" class="item">
-                        <span class="icon">
-                            <i class="fa fa-star"></i>
-                        </span>
-                        <span class="name">自定义CDN</span>
-                    </a>
-                    <a href="#" class="item">
-                        <span class="icon">
-                            <i class="fa fa-envelope-o"></i>
-                        </span>
-                        <span class="name">评论设置</span>
-                    </a>
-                    <a href="#" class="item">
-                        <span class="icon">
-                            <i class="fa fa-folder-o"></i>
-                        </span>
-                        <span class="name">Pjax</span>
-                    </a>
+                    <ul class="pane-parent">
+                        <li class="item active" aria-owns="sub-accordion-section-0">
+
+                            <span class="name">站点设置</span>
+                            <span class="icon" style="float: right;">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </span>
+                        </li>
+                        <li class="item" aria-owns="sub-accordion-section-1">
+                            <span class="name">导航菜单</span>
+                            <span class="icon" style="float: right;">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </span>
+                        </li>
+                        <li class="item" aria-owns="sub-accordion-section-2">
+                            <span class="name">评论设置</span>
+                            <span class="icon" style="float: right;">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </span>
+                        </li>
+                        <li class="item" aria-owns="sub-accordion-section-3">
+                            <span class="name">Pjax</span>
+                            <span class="icon" style="float: right;">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <ul class="pane-parent-child is-hidden" id="sub-accordion-section-0">
+                        <li>
+                            <button class="button back">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="item-content">
+                            <div class="field">
+                                <label class="label">博客名称</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Achirou's Blog" value="Achirou's Blog">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">作者</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-success" type="text" placeholder="Achirou" value="Achirou">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-success">This username is available</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-danger" type="email" placeholder="Email input"
+                                        value="hello@">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger">This email is invalid</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Subject</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Select dropdown</option>
+                                            <option>With options</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Message</label>
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        I agree to the <a href="#">terms and conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button class="button is-link">Submit</button>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-link is-light">Cancel</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="pane-parent-child is-hidden" id="sub-accordion-section-1">
+                        <li>
+                            <button class="button back">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="item-content">
+                            <div class="field">
+                                <label class="label">博客名称</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Text input">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">作者</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-success">This username is available</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-danger" type="email" placeholder="Email input"
+                                        value="hello@">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger">This email is invalid</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Subject</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Select dropdown</option>
+                                            <option>With options</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Message</label>
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        I agree to the <a href="#">terms and conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button class="button is-link">Submit</button>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-link is-light">Cancel</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="pane-parent-child is-hidden" id="sub-accordion-section-2">
+                        <li>
+                            <button class="button back">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="item-content">
+                            <div class="field">
+                                <label class="label">博客名称</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Text input">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">作者</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-success">This username is available</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-danger" type="email" placeholder="Email input"
+                                        value="hello@">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger">This email is invalid</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Subject</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Select dropdown</option>
+                                            <option>With options</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Message</label>
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        I agree to the <a href="#">terms and conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button class="button is-link">Submit</button>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-link is-light">Cancel</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="pane-parent-child is-hidden" id="sub-accordion-section-3">
+                        <li>
+                            <button class="button back">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="item-content">
+                            <div class="field">
+                                <label class="label">博客名称</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Text input">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">作者</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-success">This username is available</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left has-icons-right">
+                                    <input class="input is-danger" type="email" placeholder="Email input"
+                                        value="hello@">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <span class="icon is-small is-right">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger">This email is invalid</p>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Subject</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>Select dropdown</option>
+                                            <option>With options</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Message</label>
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Textarea"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        I agree to the <a href="#">terms and conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="question">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <button class="button is-link">Submit</button>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-link is-light">Cancel</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
+            <footer class="aside-footer">
+                <div class="has-text-left is-active">
+                    <a href="#" id="aside-hide" class="">
+                        <span class="icon has-text-info">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                        </span>
+                        <span>隐藏控制区</span>
+                    </a>
+                </div>
+                <div class="aside-footer-right">
+                    <a href="#" class="">
+                        <span class="icon has-text-info">
+                            <i class="fa fa-desktop" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="#" class="">
+                        <span class="icon has-text-info">
+                            <i class="fa fa-tablet" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="#" class="">
+                        <span class="icon has-text-info">
+                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
+            </footer>
         </aside>
         <div class="column message hero is-fullheight" id="message-pane">
             <iframe id="site" src="https://jsonpop.cn" width="100%" height="100%"></iframe>
@@ -58,15 +471,49 @@
     </div>
     <script src="js/NZ-Loading.min.js"></script>
     <script>
-        $(function (){
+        $(function () {
             var iframe = $("#message-pane");
-            var loadingid_iframe = iframe.NZ_Loading("show", { content: "正在打开新世界..." });
+            var loadingid_iframe = iframe.NZ_Loading("show", { content: "重载配置请稍等..." });
             $("#site").load(function () {
-                iframe.NZ_Loading("hide", { loadingid: loadingid_iframe });
+                iframe.NZ_Loading("hide", { loadingid: loadingid_iframe });
             });
+
+            $(".item").click(function () {
+                $(this).add("active");
+                $(this).siblings().removeClass("active");
+                $(".pane-parent").toggleClass("is-hidden")
+                var contentId = "#" + $(this).attr("aria-owns");
+                var content = $(contentId);
+                content.toggleClass("is-hidden");
+                var backBtn  = content.find(".back");
+                backBtn.unbind("click").bind("click",function () {
+                    content.toggleClass("is-hidden");
+                    $(".pane-parent").toggleClass("is-hidden");
+                });
+
+            });
+            function back(content){
+                content.toggleClass("is-hidden");
+                $(".pane-parent").toggleClass("is-hidden");
+            }
+
+            $("#aside-hide").click(function () {
+                isAdjust()
+            });
+            function isAdjust() {
+                var isClose = $("#aside-hide").hasClass("collapse-aside");
+                if (isClose) {
+                    $(".aside").css("margin-left", "0");
+                    $("#aside-hide").removeClass("collapse-aside");
+                } else {
+                    var width = $(".aside").outerWidth();
+                    var marginLeft = $(".aside").css("margin-left");
+                    $(".aside").css("margin-left", "-" + width + "px");
+                    $("#aside-hide").addClass("collapse-aside");
+                }
+            }
         });
 
-        
     </script>
 </body>
 
